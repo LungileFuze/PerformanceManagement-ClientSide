@@ -1,0 +1,19 @@
+<form [formGroup]="agreementForm"> 
+    <mat-form-field appearance="outline" class="field">
+        <mat-label>Service Number</mat-label>
+        <input type="text" matInput formControlName="serviceNumber" title="Service Number">
+    </mat-form-field>
+    <br/>
+    <mat-form-field appearance="outline" class="field">
+        <mat-label>Manager Service Number</mat-label>
+        <input type="text" matInput formControlName="managerServiceNumber" title="Manager Service Number">
+    </mat-form-field>
+    <br/>
+    <mat-form-field appearance="outline" class="field">
+        <mat-label>Financial Year</mat-label>
+        <input type="text" matInput title="Financial Year" formControlName="financialYear">
+    </mat-form-field>
+    <br/>
+    <button type="button" mat-raised-button color="primary" title="Create Agreement" (click)="createAgreement()">Create Agreement</button>
+</form>
+<div style="display: none;" *ngIf="agreement$ | async"></div>
